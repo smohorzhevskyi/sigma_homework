@@ -9,7 +9,7 @@ days = [7, 6, 5, 4, 3, 2, 1].
 ('Sunday', 7)]
 """
 
-weekdays = ['Sunday', 'Saturday', 'Friday', 'Thursday', 'Wednesday', 'Tuesday', 'Monday']
+weekdays = ['Sunday', 'Saturday', 'Friday', 'Monday', 'Thursday', 'Wednesday', 'Tuesday']
 days = [7, 6, 5, 4, 3, 2, 1]
-days_of_week = list(zip(weekdays[::-1], sorted(days)))
+days_of_week = sorted(list(zip(weekdays, days)), key=lambda x: x[1])
 print(days_of_week)
