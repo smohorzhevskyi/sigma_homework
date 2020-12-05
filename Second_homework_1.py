@@ -3,4 +3,4 @@
 при условии, что делитель не равен 0, иначе возвращаем None.
 """
 
-(lambda x, y: print(x / y) if y != 0 else None)(x=float(input()), y=float(input()))
+print((lambda x, y: x / y if y != 0 else None)(x=float(input()), y=float(input())))
