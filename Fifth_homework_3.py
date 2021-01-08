@@ -22,8 +22,12 @@ def html_decorator(html_tag, N):
     def inner_decorator(function):
         def wrapper(string):
             list_result = []
-            string.replace('@#%&$^*_', ' ')
-            string.replace('<>/', '')
+            chars = '@#%&$^*_'
+            for char in chars:
+                string = string.replace(char, ' ').strip()
+            chars = '<>/'
+            for char in chars:
+                string = string.replace(char, '').strip()
             for i in range(1, N+1):
                 element = f"<{html_tag}>{string.capitalize()} {i}</{html_tag}>"
                 list_result.append(element)
