@@ -31,19 +31,19 @@ class Human:
 
     @property
     def full_name(self):
-        return self.first_name + ' ' + self.last_name
+        return f"'{self.first_name} {self.last_name}'"
 
 
 class Employee(Human):
 
-    @staticmethod
-    def from_string(string):
-        tmp = string.split("-")
-        return Employee(tmp[0], tmp[1], tmp[2])
-
     def __init__(self, first_name, last_name, salary):
         super().__init__(first_name, last_name)
         self.salary = salary
+
+    @staticmethod
+    def from_string(string):
+        my_list = string.split("-")
+        return Employee(*my_list)
 
 
 emp1 = Employee('JOAN', 'Smith', 85000)
