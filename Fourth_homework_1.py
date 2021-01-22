@@ -31,12 +31,14 @@ class Calculator:
 
     @staticmethod
     def divide(x, y):
-        if y == 0:
-            return "Can't divide by zero"
-        else:
+        try:
             return x / y
+        except ZeroDivisionError:
+            return "Can't divide by zero"
 
     @staticmethod
     def exponent(x, y):
         return x ** y
 
+
+print(Calculator.divide(5, 0))
