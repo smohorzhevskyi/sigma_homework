@@ -22,10 +22,10 @@ class Pizza:
     order_number = 0
     ingredients = []
 
-    def __init__(self, list_):
+    def __init__(self, list_of_ingredients):
         Pizza.order_number += 1
         self.order_number = Pizza.order_number
-        self.ingredients = list_
+        self.ingredients = list_of_ingredients
 
     @classmethod
     def hawaiian(cls):
