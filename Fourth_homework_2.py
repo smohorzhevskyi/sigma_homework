@@ -22,22 +22,22 @@ class Pizza:
     order_number = 0
     ingredients = []
 
-    @staticmethod
-    def hawaiian():
-        return Pizza(["ham", "pineapple"])
-
-    @staticmethod
-    def pepperoni():
-        return Pizza(["bacon", "mozzarella", "oregano"])
-
-    @staticmethod
-    def margherita():
-        return Pizza(["mozzarella", "olives", "tomatoes"])
-
     def __init__(self, list_):
         Pizza.order_number += 1
         self.order_number = Pizza.order_number
         self.ingredients = list_
+
+    @classmethod
+    def hawaiian(cls):
+        return cls(["ham", "pineapple"])
+
+    @classmethod
+    def pepperoni(cls):
+        return cls(["bacon", "mozzarella", "oregano"])
+
+    @classmethod
+    def margherita(cls):
+        return cls(["mozzarella", "olives", "tomatoes"])
 
 
 p1 = Pizza(["bacon", "parmesan", "ham"])
