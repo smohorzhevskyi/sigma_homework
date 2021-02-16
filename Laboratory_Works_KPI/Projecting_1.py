@@ -22,4 +22,3 @@ def k_biggest(array, k):
 after = datetime.now()
 print(f"{(after - before).total_seconds() * 1000} is code exec time in ms")
 print(f"{K}-biggest in {k_biggest(S, K)} is {S[K-1]} at position of {S.index(A)} (count from 0)")
-
